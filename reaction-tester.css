@@ -1,0 +1,28 @@
+#shape{
+    position: relative;
+}
+#game-information{
+    margin: auto;
+    border: 1px black solid;
+    height:600px;
+    width: 600px;
+    display: none;
+}
+#game-over{
+    padding: 0px 80px 40px 20px;
+}
+#time-taken-paragraph{
+    float: left;
+}
+#no-of-lives{
+    float: right;
+    padding-left: 10px;
+}
+#no-of-clicks{
+    float: right;
+    padding-left: 10px;
+}
+#total-time-spent{
+    float: right;
+    padding-left: 10px;
+}
