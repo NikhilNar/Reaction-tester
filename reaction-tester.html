@@ -33,6 +33,8 @@
         </style>
     </head>
     <body>
+        <h1>Test your Reactions!</h1>
+        <h4>Click the shapes as quickly as you can .</h4>
         <p id="time-taken-paragraph">Time taken : <span id="time-taken"></span> </p>
         <p id="no-of-lives">No of lives:<span id="lives"></span></p>
         <p id="no-of-clicks">Score:<span id="clicks"></span></p>
@@ -83,7 +85,7 @@
             function displayShape(){
                 document.getElementById("lives").innerHTML=noOfLives;
                 document.getElementById("clicks").innerHTML=noOfClicks;
-                document.getElementById("time-spent").innerHTML=totalTime;
+                document.getElementById("time-spent").innerHTML=totalTime.toFixed(4);
                 randomSize();
                 randomShape();
                 randomColor();
@@ -100,6 +102,8 @@
                 setTimeout(displayShape,Math.random()*1500);
             }
             function displayScore(){
+                document.getElementsByTagName("h1").item(0).style.display="none";
+                document.getElementsByTagName("h4").item(0).style.display="none";
                 document.getElementById("time-taken-paragraph").style.display="none";
                 document.getElementById("no-of-lives").style.display="none";
                 document.getElementById("no-of-clicks").style.display="none";
@@ -109,7 +113,7 @@
                 document.getElementById("game-over").innerHTML="Game Over";
                 document.getElementById("game-over").style.fontSize="100px";
                 document.getElementById("total-clicks").innerHTML="Total Clicks ="+noOfClicks;
-                document.getElementById("total-time").innerHTML="Total time ="+totalTime+"seconds";
+                document.getElementById("total-time").innerHTML="Total time ="+totalTime.toFixed(4)+"seconds";
             }
             document.getElementById("shape").onclick=function(){
 
